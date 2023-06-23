@@ -6,12 +6,12 @@ const N_SPACES = 3;
 const SHEET_PATH = "sheets/example_spreadsheet.xlsx";
 const RANGE = utils.decode_range("A5:G91");
 
-//
-// const getLabelAndLevel = (value, index) => ({
-//   label: value.trim(),
-//   level: value.search(/\S/) / N_SPACES,
-//   index,
-// });
+const getLabelAndLevel = (value, index) => ({
+  label: value.trim(),
+  level: value.search(/\S/) / N_SPACES,
+  index,
+});
+
 //
 // const getRowCells = (row, rowHeaders, columnHeaders) =>
 //   columnHeaders.reduce(
