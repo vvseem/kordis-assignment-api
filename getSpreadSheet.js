@@ -28,6 +28,10 @@ const getRowCells = (row, rowHeaders, columnHeaders) =>
   );
 
 const getSpreadSheet = () => {
+  return {
+    test: "test",
+  };
+
   const book = readFile(SHEET_PATH, { dense: true });
   const sheet = book.Sheets[book.SheetNames[0]];
   const sheetData = sheet["!data"].slice(RANGE.s.r, RANGE.e.r + 1);
