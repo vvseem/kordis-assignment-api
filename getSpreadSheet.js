@@ -12,23 +12,24 @@ const getLabelAndLevel = (value, index) => ({
   index,
 });
 
-//
-// const getRowCells = (row, rowHeaders, columnHeaders) =>
-//   columnHeaders.reduce(
-//     (data, column, index) => ({
-//       ...data,
-//       [column]:
-//         row[index]?.f.replace(/([A-Z]+)(\d+)/g, (cell) => {
-//           const { r: row_no, c: column_no } = utils.decode_cell(cell);
-//           return `'${rowHeaders[row_no - RANGE.s.r - 1].index}'&'${
-//             columnHeaders[column_no - 1]
-//           }'`;
-//         }) ?? "",
-//     }),
-//     {}
-//   );
-//
+const getRowCells = (row, rowHeaders, columnHeaders) =>
+  columnHeaders.reduce(
+    (data, column, index) => ({
+      ...data,
+      [column]:
+        row[index]?.f.replace(/([A-Z]+)(\d+)/g, (cell) => {
+          const { r: row_no, c: column_no } = utils.decode_cell(cell);
+          return `'${rowHeaders[row_no - RANGE.s.r - 1].index}'&'${
+            columnHeaders[column_no - 1]
+          }'`;
+        }) ?? "",
+    }),
+    {}
+  );
+
 const getSpreadSheet = () => {
+  const book = readFile(SHEET_PATH, { dense: true });
+
   return {
     test: "test",
   };
