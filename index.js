@@ -9,12 +9,8 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  const spreadsheet = getSpreadSheetData();
+  const spreadsheet = { test: "test" };
   res.send(JSON.stringify(spreadsheet));
-});
-
-app.get("/about", (req, res) => {
-  res.send("This is my about route..... ");
 });
 
 // Export the Express API
