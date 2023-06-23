@@ -1,10 +1,11 @@
-// const { readFile, utils, set_fs } = require("xlsx");
-// const fs = require("fs");
-// set_fs(fs);
-//
-// const N_SPACES = 3;
-// const SHEET_PATH = "sheets/example_spreadsheet.xlsx";
-// const RANGE = utils.decode_range("A5:G91");
+const { readFile, utils, set_fs } = require("xlsx");
+const fs = require("fs");
+set_fs(fs);
+
+const N_SPACES = 3;
+const SHEET_PATH = "sheets/example_spreadsheet.xlsx";
+const RANGE = utils.decode_range("A5:G91");
+
 //
 // const getLabelAndLevel = (value, index) => ({
 //   label: value.trim(),
