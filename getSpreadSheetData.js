@@ -1132,8 +1132,8 @@ const data = {
   },
 };
 
-const getSpreadsheetData = () => {
+const getSpreadSheetData = () => {
   return data;
 };
 
-module.exports = getSpreadsheetData;
+module.exports = getSpreadSheetData;
