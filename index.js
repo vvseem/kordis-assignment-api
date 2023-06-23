@@ -19,6 +19,7 @@
 // });
 
 const express = require("express");
+const getSpreadSheet = require("./getSpreadSheet");
 
 const app = express();
 const PORT = 4000;
@@ -28,7 +29,8 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Hey this is my API running 🥳");
+  const spreadsheet = getSpreadSheet();
+  res.status(200).json(spreadsheet);
 });
 
 app.get("/about", (req, res) => {
