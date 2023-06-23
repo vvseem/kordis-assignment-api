@@ -1,5 +1,5 @@
 const express = require("express");
-const getSpreadSheet = require("./getSpreadSheet");
+const getSpreadSheetData = require("./getSpreadSheetData");
 
 const app = express();
 const PORT = 4000;
@@ -9,7 +9,7 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  const spreadsheet = getSpreadSheet();
+  const spreadsheet = getSpreadSheetData();
   res.send(JSON.stringify(spreadsheet));
 });
 

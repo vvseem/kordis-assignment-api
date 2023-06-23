@@ -1,5 +1,5 @@
 const { read, utils, set_fs } = require("xlsx");
-const byteData = require("./getSheetInBytes");
+const byteData = require("./getSpreadsheetData");
 const fs = require("fs");
 set_fs(fs);
 
